@@ -9,11 +9,24 @@ token*.txt
 __pycache__/
 *.pyc
 *.pyo
+*.pyd
+.pytest_cache/
+.coverage
+venv/
+env/
+.venv/
 
 # IDE
 .vscode/
 .idea/
+*.iml
 
 # OS
 .DS_Store
 Thumbs.db
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/
