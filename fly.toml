@@ -1,6 +1,14 @@
 app = "cryptoticket"
 primary_region = "ams"
 
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  DISCORD_TOKENS = ""
+  GUILD_ID = ""
+  BOT_EMAILS = ""
+
 [[services]]
   internal_port = 8080
   protocol = "tcp"
@@ -9,3 +17,8 @@ primary_region = "ams"
     port = 80
     handlers = ["http"]
     force_https = true
+
+  [services.concurrency]
+    type = "connections"
+    hard_limit = 25
+    soft_limit = 20
