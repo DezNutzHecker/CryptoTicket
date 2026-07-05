@@ -29,6 +29,7 @@ async def on_message(message):
         return
     if isinstance(message.channel, discord.DMChannel):
         logger.info(f"📨 DM from {message.author}: {message.content}")
+        await message.channel.send("Hello! I'm a bot. I will create a ticket for you.")
 
 try:
     client.run(TOKEN)
